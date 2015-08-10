@@ -46,6 +46,33 @@
             //Assert
             $this->assertEquals("Return of the King", $result);
         }
+
+        function test_makeTitleCase_designatedFirstWord()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "the two towers";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("The Two Towers", $result);
+
+        }
+
+        function test_makeTitleCase_mixedCase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "THe TwO ToWErS";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+            //Assert
+            $this->assertEquals("The Two Towers", $result);
+        }
+
     }
 
 

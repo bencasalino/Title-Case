@@ -3,3 +3,5 @@ capitalize one word
 capitalizes the first letter for multiple words
 does not capitalize designated words ("a", "as", "an", "by", "of", "on", "to", "the", "or", "in", "from")
 if the first word is a designated word, then it IS capitalized :)
+handles non-letter characters (like numbers, symbols, etc)
+manages all uppercase and mixed case entries
