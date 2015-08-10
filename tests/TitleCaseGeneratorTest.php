@@ -25,14 +25,31 @@
 
             // Arrange
             $test_TitleCaseGenerator = new TitleCaseGenerator;
-            $input = "the little mermaid";
+            $input = "little mermaid";
 
             // Act
             $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
             // Assert
-            $this->assertEquals("The Little Mermaid", $result);
+            $this->assertEquals("Little Mermaid", $result);
+        }
+
+        function test_makeTitleCase_designatedWords()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "return of the king";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Return of the King", $result);
         }
     }
+
+
+
+
 
 ?>
